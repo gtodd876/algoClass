@@ -1,3 +1,7 @@
+var Stack = function() {
+  this.storage = {};
+  };
+
 Stack.prototype.push = function(val) {
   var key = Object.keys(this.storage).length;
   this.storage[key] = val;

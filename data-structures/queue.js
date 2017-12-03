@@ -1,3 +1,37 @@
+var Queue = function() {
+  this.storage = {};
+};
+
+Queue.prototype.enqueue = function(val) {
+  var length = Object.keys(this.storage).length;
+  if (length) {
+    while (length > 0) {
+      this.storage[length] = this.storage[length-1];
+      length--;
+    }
+  }
+  this.storage[0] = val;
+};
+
+Queue.prototype.dequeue = function(val) {
+  var key = Object.keys(this.storage).length;
+  delete this.storage[key-1];
+};
+
+Queue.prototype.size = function(val) {
+  return Object.keys(this.storage).length;
+};
+
+var myWeeklyMenu = new Queue();
+
+myWeeklyMenu.enqueue('Redbeans');
+myWeeklyMenu.enqueue('cabbage');
+myWeeklyMenu.enqueue('onions');
+myWeeklyMenu.dequeue();
+var sizeUp = myWeeklyMenu.size();
+console.log(sizeUp);
+
+
 /*
 
 QUEUE
