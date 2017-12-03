@@ -29,5 +29,28 @@ function exponent(base, expo) {
 }
 
 //5. Write a function 'recursiveMultiplier' that takes two arguments, 'arr and num', and multiplies each arr value into by num and returns an array of the values.
-
+function recursiveMultiplier(arr, num) {
+  var index = 0;
+  var newArray = [];
+  function arrMultiply(index) {
+    if (index > (arr.length - 1)) return;
+    newArray.push(arr[index] * num);
+    arrMultiply(index + 1);
+  }
+  arrMultiply(index);
+  return newArray;
+}
 //6. Write a function 'recursiveReverse' that takes an array and uses recursion to return its contents in reverse
+function recursiveReverser(arr) {
+  var index = arr.length - 1;
+  var newArray = [];
+  arrReverse(index);
+  function arrReverse(index) {
+    if (index < 0) return;
+    newArray.push( arr[index] );
+    arrReverse(index - 1); 
+  }
+  return newArray;
+}
+
+recursiveReverser([8,5,4,7,3]);
