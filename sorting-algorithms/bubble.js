@@ -19,3 +19,20 @@ Variants:
 (https://en.wikipedia.org/wiki/Cocktail_sort)
 
 */
+
+const bubbleSort = (arr) => {
+  do {
+    var swapped = false;
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] > arr[i+1]) {
+        var temp = arr[i];
+        arr[i] = arr[i+1];
+        arr[i+1] = temp;
+        swapped = true;
+      }
+    }
+  console.log(arr);
+  } while (swapped);
+};
+
+bubbleSort([8, 3, 4, 9, 1, 5]);
