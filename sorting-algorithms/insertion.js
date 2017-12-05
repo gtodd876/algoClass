@@ -29,3 +29,22 @@ now repeat for next unsorted element
 (https://en.wikipedia.org/wiki/Shellsort)
 
 */
+
+const insertionSort = (arr) => {
+  var sortedArr = arr.splice(0, 1);
+  for(var i = 0; arr.length > 0; i++) {
+    var element = arr.splice(0, 1);
+    for(var k = 0; k < sortedArr.length; k++) {
+      if (element[0] > sortedArr[sortedArr.length-1]) {
+         sortedArr.push(element[0]);
+         break;
+      }
+      if (element[0] < sortedArr[k]) {
+         sortedArr.splice(k, 0, element[0]); 
+         break;
+      }
+    } 
+  }
+console.log(sortedArr);
+}
+insertionSort([8, 5, 3, 29, 1, 9]);
