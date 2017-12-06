@@ -29,7 +29,7 @@ now repeat for next unsorted element
 (https://en.wikipedia.org/wiki/Shellsort)
 
 */
-
+//1st attempt
 const insertionSort = (arr) => {
   var sortedArr = arr.splice(0, 1);
   for(var i = 0; arr.length > 0; i++) {

@@ -28,6 +28,7 @@ Stable Variant
 - Implement selection sort for a linked list (you can use your data structure implemention from earlier in the course). How does this impact performance and stability?
 
 */
+//1st attempt
 const selectionSort = arr => {
   var sortedArr = [];
   while (arr.length > 0) {

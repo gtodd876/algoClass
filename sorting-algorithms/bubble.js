@@ -19,7 +19,7 @@ Variants:
 (https://en.wikipedia.org/wiki/Cocktail_sort)
 
 */
-
+//1st attempt
 const bubbleSort = (arr) => {
   do {
     var swapped = false;
